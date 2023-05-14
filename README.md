@@ -4,7 +4,6 @@
 
 ## Integrantes del equipo
 Jose Juan Cerro
-Hugo Alonso
 Cecilia Barral
 
 ## Objetivos del trabajo
