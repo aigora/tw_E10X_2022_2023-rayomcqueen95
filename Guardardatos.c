@@ -10,7 +10,7 @@ typedef struct
 int main()
 {
 	FILE *plectura;
-	plectura = fopen("tw_E10X_2022_2023-rayomcqueen95/generacion_por_tecnologias_21_22_puntos.csv", "r");
+	plectura = fopen("generacion_por_tecnologias_21_22_puntos.csv", "r");
 	
 	if (plectura == NULL)
 	{
@@ -27,7 +27,7 @@ int main()
 			//no se como leer el excel
 		}
 		
-		//El vector de estructuras "fuente" guardar· los datos de las fuentes energÈticas leÌdas en el fichero.	
+		//El vector de estructuras "fuente" guardar√° los datos de las fuentes energ√©ticas le√≠das en el fichero.	
 		energia fuente[40];
 		int nfuentes=0;	
 		int i;
