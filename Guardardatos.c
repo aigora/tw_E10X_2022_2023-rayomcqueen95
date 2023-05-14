@@ -22,9 +22,13 @@ int main()
 		printf("Fichero abierto correctamente.\n");
 		
 		char c;
+		int nlineas = 0;
 		while(fscanf(plectura, "%c", &c) != EOF)
 		{
-			//no se como leer el excel
+			if(c == '\n')
+			{
+				nlineas++;
+			}
 		}
 		
 		//El vector de estructuras "fuente" guardará los datos de las fuentes energéticas leídas en el fichero.	
