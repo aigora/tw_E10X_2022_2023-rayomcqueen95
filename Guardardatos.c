@@ -2,7 +2,7 @@
 
 typedef struct 
 {
-	int month[11], year[50];
+	int month[23];
 	float gwh[11];
 	char nombre[30];
 } energia;
@@ -39,7 +39,7 @@ int main()
 		
 		for(i=0; i<nfuentes; i++)
 		{
-			for(j=0; j<=11; j++)
+			for(j=0; j<=23; j++)
 			{
 				fuente[i].gwh[j] = //energia generada en ese mes por esa fuente
 			}
