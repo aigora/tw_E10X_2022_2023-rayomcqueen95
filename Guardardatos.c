@@ -3,7 +3,7 @@
 typedef struct 
 {
 	int month[23];
-	float gwh[11];
+	float gwh[23];
 	char nombre[30];
 } energia;
 
