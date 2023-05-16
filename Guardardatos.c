@@ -2,8 +2,9 @@
 
 typedef struct 
 {
-	int month, year;
-	float gwh;
+	int month[11], year[50];
+	float gwh[11];
+	char nombre[30];
 } energia;
 
 
@@ -34,11 +35,14 @@ int main()
 		//El vector de estructuras "fuente" guardará los datos de las fuentes energéticas leídas en el fichero.	
 		energia fuente[40];
 		int nfuentes=0;	
-		int i;
+		int i, j;
 		
 		for(i=0; i<nfuentes; i++)
 		{
-			fuente[i].month =
+			for(j=0; j<=11; j++)
+			{
+				fuente[i].gwh[j] = //energia generada en ese mes por esa fuente
+			}
 		}
 		
 		
