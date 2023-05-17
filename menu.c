@@ -2,242 +2,144 @@
 int main()
 {
     char letra, final, op;
-    printf("¿Que quieres hacer?\n Pulsa la tecla correspondiente a la accion que quieres realizar\n");
-    printf("Mostrar datos: -a- \n");
-    printf("Realizar operaciones: -b- \n");
-    printf("Salir: -c- \n");
+    printf("Que quieres hacer?\n \n");
+    printf("\t      Mostrar datos: -a- \n");
+    printf("\t  Realizar operaciones: -b- \n");
+    printf("\t \t Salir: -c- \n \n");
+    printf("Pulsa la tecla (minuscula) correspondiente a la accion que quieres realizar: ");
     scanf(" %c",&letra);
-
     switch (letra)
     {
         case ('a'):
         {
-            printf("Has seleccionado 'Mostrar datos'\n");
-            //
+            printf("\nHas seleccionado 'Mostrar datos'\n");
+            // no sé si lo podremos hacer o no pero por si acaso lo dejo
+            // me imagino que le puedo preguntar al usuario qué datos quiere ver con los datos almacenados
             printf("Deseas hacer alguna otra operacion?\n");
-            //
-            printf("-s- Si\n");
-            printf("-n- No\n");
-            scanf(" %c",&final);
+            printf("\t-s- Si\n");
+            printf("\t-n- No\n");
+            scanf(" %c", &final);
             switch (final)
             {
                 case ('s'):
                 {
-                    {
-                    printf("Pulsa la tecla correspondiente a la accion que quieres realizar\n");
-                    printf("Mostrar datos: -a- \n");
-                    printf("Realizar operaciones: -b- \n");
-                    printf("Salir: -c- \n");
+                    printf("\nPulsa la tecla (minuscula) correspondiente a la accion que quieres realizar\n");
+                    printf("\t      Mostrar otro dato: -a- \n");
+                    printf("\t     Realizar operaciones: -b- \n");
+                    printf("\tMe equivoque de tecla, quiero salir: -c- \n");
                     scanf(" %c",&letra);
                     switch (letra)
                         {
                             case ('a'):
                             {
-                                printf("Has seleccionado 'Mostrar datos'\n");
+                                printf("Has seleccionado 'Mostrar otro dato'\n");
                                 //
+                                printf("\n \tGracias por utilizar nuestro programa!");
                             }break;
                             case ('b'):
                             {
                                 printf("Has seleccionado 'Realizar operaciones'\n");
-                                printf("Que operacion quieres realizar?\n");
-                                printf("Max: -q- \n");
-                                printf("Min: -w- \n");
-                                printf("Media: -e- \n");
-                                printf("Media (global): -r- \n");
-                                printf("Comparar energias: -t- \n");
+                                printf("\nQue operacion quieres realizar?\n");
+                                printf(" \t       Max: -q- \n");
+                                printf(" \t       Min: -w- \n");
+                                printf(" \t      Media: -e- \n");
+                                printf("\t   Media (global): -r- \n");
+                                printf("\tComparar energias: -t- \n");
+                                printf("\nPulsa la tecla (minuscula) correspondiente a la accion que quieres realizar\n");
                                 scanf(" %c",&op);
                                 switch (op)
                                 {
                                 case ('q'):
                                     {
                                         printf("Has seleccionado 'Max'\n");
-                                        //
-                                    }
-                                    break;
+                                        //calcular el maximo
+                                        printf("\n \tGracias por utilizar nuestro programa!");
+                                    }break;
                                 case ('w'):
                                 {
                                     printf("Has seleccionado 'Min'\n");
                                     //calcular el min
-                                }
-                                    break;
+                                    printf("\n \tGracias por utilizar nuestro programa!");
+                                }break;
                                 case ('e'):
                                 {
                                     printf("Has seleccionado 'Media'\n");
                                     //calcular la media
-                                }
-                                    break;
+                                    printf("\n \tGracias por utilizar nuestro programa!");
+                                }break;
                                 case ('r'):
                                 {
                                     printf("Has seleccionado 'Media (global)'\n");
                                     //calcular la media global
-                                }
-                                    break;
+                                    printf("\n \tGracias por utilizar nuestro programa!");
+                                }break;
                                 case ('t'):
                                 {
                                     printf("Has seleccionado 'Comparar energias'\n");
                                     //comparar energías
-                                }
-                                    break;
+                                    printf("\n \tGracias por utilizar nuestro programa!");
+                                }break;
                                 }
                             }break;
                             case ('c'):
                             {
-                                printf("¡Gracias por utilizar nuestro programa!\n");
+                                printf("\nGracias por utilizar nuestro programa!\n");
                             }break;
-                            default:
-                            {
-                                do
-                                    {
-                                        printf("Pulsa la tecla correspondiente a la accion que quieres realizar \n");
-                                        scanf(" %c", &letra);
-                                    } while (letra != 'a' && letra != 'b' && letra != 'c');
-                            }
                         }
                 }break;
                 case ('n'):
                 {
-                    printf("Gracias por utilizar el programa!");
-                }break;
+                    printf("\nGracias por utilizar nuestro programa!");
+                }
             }
         }break;
         case ('b'):
         {
-            printf("Has seleccionado 'Realizar operaciones'\n");
-            printf("Que operacion quieres realizar?\n");
-            printf("Max: -q- \n");
-            printf("Min: -w- \n");
-            printf("Media: -e- \n");
-            printf("Media (global): -r- \n");
-            printf("Comparar energias: -t- \n");
-            scanf(" %c",&op);
-            switch (op)
+        	 printf("\nHas seleccionado 'Realizar operaciones'\n");
+            printf(" \t       Max: -q- \n");
+            printf(" \t       Min: -w- \n");
+            printf(" \t      Media: -e- \n");
+            printf("\t   Media (global): -r- \n");
+            printf("\tComparar energias: -t- \n");
+            printf("\nPulsa la tecla (minuscula) correspondiente a la accion que quieres realizar: ");
+            scanf(" %c", &op);
+            switch(op)
             {
-            case ('q'):
-            {
-                printf("Has seleccionado 'Max'\n");
-                //calcular el maximo
-            }
-                break;
-            case ('w'):
-            {
-                printf("Has seleccionado 'Min'\n");
-                //calcular el min
-            }
-                break;
-            case ('e'):
-            {
-                printf("Has seleccionado 'Media'\n");
-                //calcular la media
-            }
-                break;
-            case ('r'):
-            {
-                printf("Has seleccionado 'Media (global)'\n");
-                //calcular la media global
-            }
-                break;
-            case ('t'):
-            {
-                printf("Has seleccionado 'Comparar energias'\n");
-                //comparar energías
-            }
-                break;
-            }
-            printf("Deseas hacer alguna otra operacion?\n");
-            printf("-s- Sí\n");
-            printf("-n- No\n");
-            scanf(" %c",&final);
-            switch (final)
-            {
-                case ('s'):
-                {
-                    do
+                case ('q'):
                     {
-                    printf("Pulsa la tecla correspondiente a la accion que quieres realizar\n");
-                    printf("Mostrar datos: -a- \n");
-                    printf("Realizar operaciones: -b- \n");
-                    printf("Salir: -c- \n");
-                    scanf(" %c",&letra);
-                    switch (letra)
-                        {
-                            case ('a'):
-                            {
-                                printf("Has seleccionado 'Mostrar datos'\n");
-                                //
-                            }
-                            break;
-                            case ('b'):
-                            {
-                                printf("Has seleccionado 'Realizar operaciones'\n");
-                                printf("Que operacion quieres realizar?\n");
-                                printf("Max: -q- \n");
-                                printf("Min: -w- \n");
-                                printf("Media: -e- \n");
-                                printf("Media (global): -r- \n");
-                                printf("Comparar energias: -t- \n");
-                                scanf(" %c",&op);
-                                switch (op)
-                                {
-                                case ('q'):
-                                {
-                                    printf("Has seleccionado 'Max'\n");
-                                    //calcular el maximo
-                                }
-                                    break;
-                                case ('w'):
-                                {
-                                    printf("Has seleccionado 'Min'\n");
-                                    //calcular el min
-                                }
-                                    break;
-                                case ('e'):
-                                {
-                                    printf("Has seleccionado 'Media'\n");
-                                    //calcular la media
-                                }
-                                    break;
-                                case ('r'):
-                                {
-                                    printf("Has seleccionado 'Media (global)'\n");
-                                    //calcular la media global
-                                }
-                                    break;
-                                case ('t'):
-                                {
-                                    printf("Has seleccionado 'Comparar energias'\n");
-                                    //comparar energías
-                                }
-                                    break;
-                                }
-                            }break;
-                            case ('c'):
-                            {
-                                printf("¡Gracias por utilizar nuestro programa!\n");
-                            }break;
-                            default:
-                            {
-                                do
-                                    {
-                                        printf("Pulsa la tecla correspondiente a la accion que quieres realizar \n");
-                                        scanf(" %c", &letra);
-                                    } while (letra != 'a' && letra != 'b' && letra != 'c');
-                            }
-                        }
-                    } while (final != 'n' && letra != 'a' && letra != 'b');
-                    if(letra = 's')
+                        printf("\nHas seleccionado 'Max'\n");
+                        // código para el maximo
+                        printf("\n \tGracias por usar el programa!\nSi quieres hacer otra operacion reinicia el programa.");
+                    }break;
+                case ('w'):
                     {
-                        printf("Si quieres realizar otra operacion, reinicia el programa");
-                    }
-                }break;
-                case ('n'):
-                {
-                    printf("Gracias por utilizar el programa!");
-                }break;
+                        printf("\nHas seleccionado 'Min'\n");
+                        // código para el minimo
+                        printf("\n \tGracias por usar el programa!\nSi quieres hacer otra operacion reinicia el programa.");
+                    }break;
+                case ('e'):
+                    {
+                        printf("\nHas seleccionado 'Media'\n");
+                        // código para la media
+                        printf("\n \tGracias por usar el programa!\nSi quieres hacer otra operacion reinicia el programa.");
+                    }break;
+                case ('r'):
+                    {
+                        printf("\nHas seleccionado 'Media(global)'\n");
+                        // código para la media (global)
+                        printf("\n \tGracias por usar el programa!\nSi quieres hacer otra operacion reinicia el programa.");
+                    }break;
+                case ('t'):
+                    {
+                        printf("\nHas seleccionado 'Comparar energias'\n");
+                        // código para comparar las energias
+                        printf("\n \tGracias por usar el programa!\nSi quieres hacer otra operacion reinicia el programa.");
+                    }break;
             }
         }break;
         case ('c'):
         {
-            printf("¡Gracias por utilizar nuestro programa!");
+            printf("\nGracias por usar el programa!");
         }break;
         default:
         {
@@ -247,13 +149,6 @@ int main()
                     scanf(" %c", &letra);
                 } while (letra != 'a' && letra != 'b' && letra != 'c');
         }
-    }
-    
-}
-    return 0;
-}
-            printf("Gracias por utilizar el programa!");
-        }break;
     }
     return 0;
 }
