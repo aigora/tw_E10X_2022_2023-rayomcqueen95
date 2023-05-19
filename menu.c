@@ -13,6 +13,31 @@ int main()
         case ('a'):
         {
             printf("\nHas seleccionado 'Mostrar datos'\n");
+            printf("\nDe que anyo quieres ver los datos?\n(Introduce el anyo correspondiente)\n");
+            printf("\t-2021-\n");
+            printf("\t-2022-\n");
+            scanf(" %i",&datos);
+            switch(datos)
+            {
+            	case(2021):
+            		{
+            			printf("(Printf de prueba para ver que funcione el case de 2021)\n");
+            			//código para mostrar los datos de 2021
+					}break;
+				case(2022):
+					{
+						printf("(Printf de prueba para ver que funcione el case de 2022)\n");
+            			//código para mostrar los datos de 2022
+					}break;
+				default:
+					{
+						do
+		                {
+		                    printf("Pulsa el numero correspondiente al anyo del cual quieres ver los datos\n");
+		                    scanf(" %i", &datos);
+		                } while (datos != 2021 && datos != 2022);
+					}	
+			}
             // no sé si lo podremos hacer o no pero por si acaso lo dejo
             // me imagino que le puedo preguntar al usuario qué datos quiere ver con los datos almacenados
             printf("Deseas hacer alguna otra operacion?\n");
