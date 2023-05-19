@@ -2,6 +2,7 @@
 int main()
 {
     char letra, final, op;
+    int datos;
     printf("Que quieres hacer?\n \n");
     printf("\t      Mostrar datos: -a- \n");
     printf("\t  Realizar operaciones: -b- \n");
