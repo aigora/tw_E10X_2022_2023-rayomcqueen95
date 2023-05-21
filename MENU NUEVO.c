@@ -62,7 +62,7 @@ int main()
 	    			int anyo;
 	    			scanf(" %i",&anyo);
 	    			switch(anyo)
-	    			{//llave del case para elegir los datos del año
+	    			{//llave del case para elegir los datos del aÃ±o
 	    				case(2021):
 	    					{//llave del case para '2021'
 	    						for(i=0; i<nfuentes; i++) 
@@ -528,7 +528,7 @@ int main()
 				                    scanf(" %i", &anyo);
 				                } while (anyo != 2021 && anyo != 2022);
 							}
-					}//llave del case para elegir el año
+					}//llave del case para elegir el aÃ±o
 				}//llave del case si elige 'mostrar datos'
 			case('b'):
 				{
