@@ -39,6 +39,8 @@ int main()
 			if(nlineas==5)
 			{
 				break;
+				//para al final de la linea 5 para empezar a escanear en la 6
+				//podría introducir el if como una condicion del while pero por alguna razon se come algun caracter
 			}
 		}
 		int linea;
@@ -1002,7 +1004,7 @@ float total(int numfuente, energia vector_fuente[], int x)
 }
 
 float totalglobal(energia vector_fuente[], int x, int nfuentes)
-{
+{//tambien se puede hacer esta funcion sumando las columnas de la fila 'Generacion total'
 	float totalGlob=0;
 	int i;
 	if(x==1)
