@@ -45,7 +45,7 @@ int main()
 		int i=0;
 		int nfuentes = 16;
 		energia fuente[40];
-		for(i=0; i<nfuentes; i++)
+		for(i=0; i<=nfuentes; i++)
 		{
 			fscanf(plectura, "%[^,]s", fuente[i].nombre);
 			fscanf(plectura, "%c", &c);
@@ -78,11 +78,11 @@ int main()
 	    				scanf("%i", &anyo);
 					}
 	    			switch(anyo)
-	    			{//llave del case para elegir los datos del año
+	    			{//llave del case para elegir los datos del aÃ±o
 	    				case(2021):
 	    					{//llave del case para '2021'
 	    						printf("\n");
-	    						for(i=0; i<nfuentes; i++) 
+	    						for(i=0; i<=nfuentes; i++) 
 								{//lave del bucle for que muestra los datos de 2021
 									//vector meses que vaya avanzando dentro del for
 									printf("%i) %s\n", i+1, fuente[i].nombre);
@@ -221,7 +221,7 @@ int main()
 								}//llave para salir del programa
 								else if(letra5=='k')
 								{//lave para mostrar datos de 2022 (habiendo escogido primero 2021)
-									for(i=0; i<nfuentes; i++)
+									for(i=0; i<=nfuentes; i++)
 									{//llave de bucle for que muestra 2022
 										printf("%i) %s\n", i+1, fuente[i].nombre);
 										printf("(Mes): (Gigavatios por hora)\n");
@@ -468,7 +468,7 @@ int main()
 						case(2022):
 							{//llave del case para '2022'
 	    						printf("\n");
-	    						for(i=0; i<nfuentes; i++) 
+	    						for(i=0; i<=nfuentes; i++) 
 								{//lave del bucle for que muestra los datos de 2022
 									//vector meses que vaya avanzando dentro del for
 									printf("%i) %s\n", i+1, fuente[i].nombre);
@@ -607,7 +607,7 @@ int main()
 								}//llave para salir del programa
 								else if(letra5=='k')
 								{//lave para mostrar datos de 2021 (habiendo escogido primero 2022)
-									for(i=0; i<nfuentes; i++)
+									for(i=0; i<=nfuentes; i++)
 									{//llave de bucle for que muestra 2021
 										printf("%i) %s\n", i+1, fuente[i].nombre);
 										printf("(Mes): (Gigavatios por hora)\n");
