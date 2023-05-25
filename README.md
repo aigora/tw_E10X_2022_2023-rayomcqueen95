@@ -3,8 +3,8 @@
 [Descripción breve del proyecto a realizar (2-3 frases).]
 
 ## Integrantes del equipo
-- Jose Juan Cerro (@_Jtaas_)
-- Cecilia Barral (@_ceciliabp_)
+- Jose Juan Cerro Martín (@_Jtaas_)
+- Cecilia Barral Pérez (@_ceciliabp_)
 
 ## Objetivos del trabajo
 
