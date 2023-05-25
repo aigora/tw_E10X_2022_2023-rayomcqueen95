@@ -4,7 +4,7 @@
 
 ## Integrantes del equipo
 - Jose Juan Cerro
-- Cecilia Barral
+- Cecilia Barral (@_ceciliabp_)
 
 ## Objetivos del trabajo
 
