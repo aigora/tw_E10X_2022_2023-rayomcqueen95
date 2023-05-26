@@ -116,22 +116,22 @@ int main()
 								{//switch de operaciones 2021
 									case 'e':
 										{
-											printf("Maximo 2021: %f\n\n", maximo(x-1, fuente, 1)); //imprime el valor máximo de una fuente
+											printf("Maximo 2021: %f GWh\n\n", maximo(x-1, fuente, 1)); //imprime el valor máximo de una fuente
 											break;
 										}
 									case 'f':
 										{
-											printf("Minimo 2021: %f\n\n", minimo(x-1, fuente, 1)); //imprime el valor mínimo de una fuente
+											printf("Minimo 2021: %f GWh\n\n", minimo(x-1, fuente, 1)); //imprime el valor mínimo de una fuente
 											break;
 										}
 									case 'g':
 										{
-											printf("Media 2021: %f\n\n", mediaInd(x-1, fuente, 1)); //imprime la media de una fuente
+											printf("Media 2021: %f GWh\n\n", mediaInd(x-1, fuente, 1)); //imprime la media de una fuente
 											break;
 										}
 									case 'h':
 										{
-											printf("Total 2021: %f\n\n", total(x-1, fuente, 1)); //imprime el total
+											printf("Total 2021: %f GWh\n\n", total(x-1, fuente, 1)); //imprime el total
 											break;
 										}
 								}//switch de operaciones 2021
@@ -177,22 +177,22 @@ int main()
 										{//switch de operaciones 2021 BUCLE
 											case 'e':
 												{
-													printf("Maximo 2021: %f\n\n", maximo(x-1, fuente, 1)); //imprime el máximo de una fuente
+													printf("Maximo 2021: %f GWh\n\n", maximo(x-1, fuente, 1)); //imprime el máximo de una fuente
 													break;
 												}
 											case 'f':
 												{
-													printf("Minimo 2021: %f\n\n", minimo(x-1, fuente, 1)); //imprime el mínimo de una fuente
+													printf("Minimo 2021: %f GWh\n\n", minimo(x-1, fuente, 1)); //imprime el mínimo de una fuente
 													break;
 												}
 											case 'g':
 												{
-													printf("Media 2021: %f\n\n", mediaInd(x-1, fuente, 1)); //imprime la media de una fuente
+													printf("Media 2021: %f GWh\n\n", mediaInd(x-1, fuente, 1)); //imprime la media de una fuente
 													break;
 												}
 											case 'h':
 												{					
-													printf("Total 2021: %f\n\n", total(x-1, fuente, 1)); //imprime el total de una fuente
+													printf("Total 2021: %f GWh\n\n", total(x-1, fuente, 1)); //imprime el total de una fuente
 													break;
 												}
 										}//switch de operaciones 2021 BUCLE
@@ -270,42 +270,42 @@ int main()
 										{//switch de operaciones 2022 y globales
 											case 'e':
 												{
-													printf("Maximo 2022: %f\n\n", maximo(y-1, fuente, 2)); //muestra el máximo de una fuente
+													printf("Maximo 2022: %f GWh\n\n", maximo(y-1, fuente, 2)); //muestra el máximo de una fuente
 													break;
 												}
 											case 'f':
 												{
-													printf("Minimo 2022: %f\n\n", minimo(y-1, fuente, 2)); //muestra el mínimo de una fuente
+													printf("Minimo 2022: %f GWh\n\n", minimo(y-1, fuente, 2)); //muestra el mínimo de una fuente
 													break;
 												}
 											case 'g':
 												{
-													printf("Media 2022: %f\n\n", mediaInd(y-1, fuente, 2)); //muestra la media de una fuente
+													printf("Media 2022: %f GWh\n\n", mediaInd(y-1, fuente, 2)); //muestra la media de una fuente
 													break;
 												}
 											case 'h':
 												{
-													printf("Total 2022: %f\n\n", total(y-1, fuente, 2)); //muestra el total de una fuente
+													printf("Total 2022: %f GWh\n\n", total(y-1, fuente, 2)); //muestra el total de una fuente
 													break;
 												}
 											case 'E':
 												{
-													printf("Maximo 2021-2022: %f\n\n", maximo(y-1, fuente, 0)); //máximo de una fuente (dos años)
+													printf("Maximo 2021-2022: %f GWh\n\n", maximo(y-1, fuente, 0)); //máximo de una fuente (dos años)
 													break;
 												}
 											case 'F':
 												{
-													printf("Minimo 2021-2022: %f\n\n", minimo(y-1, fuente, 0)); //mínimo de una fuente (dos años)
+													printf("Minimo 2021-2022: %f GWh\n\n", minimo(y-1, fuente, 0)); //mínimo de una fuente (dos años)
 													break;
 												}
 											case 'G':
 												{
-													printf("Media 2021-2022: %f\n\n", mediaInd(y-1, fuente, 0)); //media de una fuente (dos años)
+													printf("Media 2021-2022: %f GWh\n\n", mediaInd(y-1, fuente, 0)); //media de una fuente (dos años)
 													break;
 												}
 											case 'H':
 												{
-													printf("Total 2021-2022: %f\n\n", total(y-1, fuente, 0)); //total de una fuente (dos años)
+													printf("Total 2021-2022: %f GWh\n\n", total(y-1, fuente, 0)); //total de una fuente (dos años)
 													break;
 												}
 											case 'x':
@@ -321,15 +321,15 @@ int main()
 													
 													if(p == 1)
 													{
-														printf("Total GLOBAL 2021: %f\n\n", totalglobal(fuente, 1, nfuentes)); //total global de 2021
+														printf("Total GLOBAL 2021: %f GWh\n\n", totalglobal(fuente, 1, nfuentes)); //total global de 2021
 													}
 													else if(p == 2)
 													{
-														printf("Total GLOBAL 2022: %f\n\n", totalglobal(fuente, 2, nfuentes)); //total global de 2022
+														printf("Total GLOBAL 2022: %f GWh\n\n", totalglobal(fuente, 2, nfuentes)); //total global de 2022
 													}
 													else if(p == 0)
 													{
-														printf("Total GLOBAL 2021-2022: %f\n\n", totalglobal(fuente, 0, nfuentes)); //total global de 2021 y 2022
+														printf("Total GLOBAL 2021-2022: %f GWh\n\n", totalglobal(fuente, 0, nfuentes)); //total global de 2021 y 2022
 													}
 													break;
 												}
@@ -382,47 +382,47 @@ int main()
 												{//switch de operaciones 2022 y globales BUCLE
 													case 'e':
 														{
-															printf("Maximo 2022: %f\n\n", maximo(z-1, fuente, 2)); //máximo de una fuente
+															printf("Maximo 2022: %f GWh\n\n", maximo(z-1, fuente, 2)); //máximo de una fuente
 															break;
 														}
 													case 'f':
 														{
-															printf("Minimo 2022: %f\n\n", minimo(z-1, fuente, 2)); //mínimo de una fuente
+															printf("Minimo 2022: %f GWh\n\n", minimo(z-1, fuente, 2)); //mínimo de una fuente
 															break;
 														}
 													case 'g':
 														{
-															printf("Media 2022: %f\n\n", mediaInd(z-1, fuente, 2)); //media de una fuente
+															printf("Media 2022: %f GWh\n\n", mediaInd(z-1, fuente, 2)); //media de una fuente
 															break;
 														}
 													case 'h':
 														{
-															printf("Total 2022: %f\n\n", total(z-1, fuente, 2)); //total de una fuente
+															printf("Total 2022: %f GWh\n\n", total(z-1, fuente, 2)); //total de una fuente
 															break;
 														}
 													case 'E':
 														{
-															printf("Maximo 2021-2022: %f\n\n", maximo(z-1, fuente, 0)); //máximo de una fuente (dos años)
+															printf("Maximo 2021-2022: %f GWh\n\n", maximo(z-1, fuente, 0)); //máximo de una fuente (dos años)
 															break;
 														}
 													case 'F':
 														{
-															printf("Minimo 2021-2022: %f\n\n", minimo(z-1, fuente, 0)); //mínimo de una fuente (dos años)
+															printf("Minimo 2021-2022: %f GWh\n\n", minimo(z-1, fuente, 0)); //mínimo de una fuente (dos años)
 															break;
 														}
 													case 'G':
 														{
-															printf("Media 2021-2022: %f\n\n", mediaInd(z-1, fuente, 0)); //media de una fuente (dos años)
+															printf("Media 2021-2022: %f GWh\n\n", mediaInd(z-1, fuente, 0)); //media de una fuente (dos años)
 															break;
 														}
 													case 'H':
 														{
-															printf("Total 2021-2022: %f\n\n", total(z-1, fuente, 0)); //total de una fuente (dos años)
+															printf("Total 2021-2022: %f GWh\n\n", total(z-1, fuente, 0)); //total de una fuente (dos años)
 															break;
 														}
 													case 'x':
 														{
-															printf("Elige:\n TOTAL GLOBAL 2021 -1-\nTOTAL GLOBAL 2022 -2-\nTOTAL GLOBAL 2021-2022 -0-\n");
+															printf("Elige:\nTOTAL GLOBAL 2021 -1-\nTOTAL GLOBAL 2022 -2-\nTOTAL GLOBAL 2021-2022 -0-\n");
 															int q;
 															scanf(" %i", &q);
 															while(q != 1 && q != 2 && q != 0) //bucle por si el usuario no introduce bien el número
@@ -433,15 +433,15 @@ int main()
 															
 															if(q == 1)
 															{
-																printf("Total GLOBAL 2021: %f\n\n", totalglobal(fuente, 1, nfuentes)); //total global de 2021
+																printf("Total GLOBAL 2021: %f GWh\n\n", totalglobal(fuente, 1, nfuentes)); //total global de 2021
 															}
 															else if(q == 2)
 															{
-																printf("Total GLOBAL 2022: %f\n\n", totalglobal(fuente, 2, nfuentes)); //total global de 2022
+																printf("Total GLOBAL 2022: %f GWh\n\n", totalglobal(fuente, 2, nfuentes)); //total global de 2022
 															}
 															else if(q == 0)
 															{
-																printf("Total GLOBAL 2021-2022: %f\n\n", totalglobal(fuente, 0, nfuentes)); //total global de 2021 y 2022
+																printf("Total GLOBAL 2021-2022: %f GWh\n\n", totalglobal(fuente, 0, nfuentes)); //total global de 2021 y 2022
 															}
 															break;
 														}
@@ -502,22 +502,22 @@ int main()
 								{//switch de operaciones 2022
 									case 'e':
 										{
-											printf("Maximo 2022: %f\n", maximo(x-1, fuente, 2)); //máximo de una fuente
+											printf("Maximo 2022: %f GWh\n", maximo(x-1, fuente, 2)); //máximo de una fuente
 											break;
 										}
 									case 'f':
 										{
-											printf("Minimo 2022: %f\n", minimo(x-1, fuente, 2)); //mínimo de una fuente
+											printf("Minimo 2022: %f GWh\n", minimo(x-1, fuente, 2)); //mínimo de una fuente
 											break;
 										}
 									case 'g':
 										{
-											printf("Media 2022: %f\n", mediaInd(x-1, fuente, 2)); //media de una fuente
+											printf("Media 2022: %f GWh\n", mediaInd(x-1, fuente, 2)); //media de una fuente
 											break;
 										}
 									case 'h':
 										{
-											printf("Total 2022: %f\n", total(x-1, fuente, 2)); //total de una fuente
+											printf("Total 2022: %f GWh\n", total(x-1, fuente, 2)); //total de una fuente
 											break;
 										}
 								}//switch de operaciones 2022
@@ -563,22 +563,22 @@ int main()
 										{//switch de operaciones 2022 BUCLE
 											case 'e':
 												{
-													printf("Maximo 2022: %f\n", maximo(x-1, fuente, 2)); //máximo de una fuente
+													printf("Maximo 2022: %f GWh\n", maximo(x-1, fuente, 2)); //máximo de una fuente
 													break;
 												}
 											case 'f':
 												{
-													printf("Minimo 2022: %f\n", minimo(x-1, fuente, 2)); //mínimo de una fuente
+													printf("Minimo 2022: %f GWh\n", minimo(x-1, fuente, 2)); //mínimo de una fuente
 													break;
 												}
 											case 'g':
 												{
-													printf("Media 2022: %f\n", mediaInd(x-1, fuente, 2)); //media de una fuente
+													printf("Media 2022: %f GWh\n", mediaInd(x-1, fuente, 2)); //media de una fuente
 													break;
 												}
 											case 'h':
 												{					
-													printf("Total 2022: %f\n", total(x-1, fuente, 2)); //total de una fuente
+													printf("Total 2022: %f GWh\n", total(x-1, fuente, 2)); //total de una fuente
 													break;
 												}
 										}//switch de operaciones 2022 BUCLE
@@ -656,42 +656,42 @@ int main()
 										{//switch de operaciones 2021 y globales
 											case 'e':
 												{
-													printf("Maximo 2021: %f\n", maximo(y-1, fuente, 1)); //máximo de una fuente 
+													printf("Maximo 2021: %f GWh\n", maximo(y-1, fuente, 1)); //máximo de una fuente 
 													break;
 												}
 											case 'f':
 												{
-													printf("Minimo 2021: %f\n", minimo(y-1, fuente, 1)); //mínimo de una fuente 
+													printf("Minimo 2021: %f GWh\n", minimo(y-1, fuente, 1)); //mínimo de una fuente 
 													break;
 												}
 											case 'g':
 												{
-													printf("Media 2021: %f\n", mediaInd(y-1, fuente, 1)); //media de una fuente 
+													printf("Media 2021: %f GWh\n", mediaInd(y-1, fuente, 1)); //media de una fuente 
 													break;
 												}
 											case 'h':
 												{
-													printf("Total 2021: %f\n", total(y-1, fuente, 1)); //total de una fuente 
+													printf("Total 2021: %f GWh\n", total(y-1, fuente, 1)); //total de una fuente 
 													break;
 												}
 											case 'E':
 												{
-													printf("Maximo 2021-2022: %f\n", maximo(y-1, fuente, 0)); //máximo de una fuente (dos años)
+													printf("Maximo 2021-2022: %f GWh\n", maximo(y-1, fuente, 0)); //máximo de una fuente (dos años)
 													break;
 												}
 											case 'F':
 												{
-													printf("Minimo 2021-2022: %f\n", minimo(y-1, fuente, 0)); //mínimo de una fuente (dos años)
+													printf("Minimo 2021-2022: %f GWh\n", minimo(y-1, fuente, 0)); //mínimo de una fuente (dos años)
 													break;
 												}
 											case 'G':
 												{
-													printf("Media 2021-2022: %f\n", mediaInd(y-1, fuente, 0)); //media de una fuente (dos años)
+													printf("Media 2021-2022: %f GWh\n", mediaInd(y-1, fuente, 0)); //media de una fuente (dos años)
 													break;
 												}
 											case 'H':
 												{
-													printf("Total 2021-2022: %f\n", total(y-1, fuente, 0)); //total de una fuente (dos años)
+													printf("Total 2021-2022: %f GWh\n", total(y-1, fuente, 0)); //total de una fuente (dos años)
 													break;
 												}
 											case 'x':
@@ -707,15 +707,15 @@ int main()
 													
 													if(p == 1)
 													{
-														printf("Total GLOBAL 2021: %f\n", totalglobal(fuente, 1, nfuentes)); //total global de 2021
+														printf("Total GLOBAL 2021: %f GWh\n", totalglobal(fuente, 1, nfuentes)); //total global de 2021
 													}
 													else if(p == 2)
 													{
-														printf("Total GLOBAL 2022: %f\n", totalglobal(fuente, 2, nfuentes)); //total global de 2022
+														printf("Total GLOBAL 2022: %f GWh\n", totalglobal(fuente, 2, nfuentes)); //total global de 2022
 													}
 													else if(p == 0)
 													{
-														printf("Total GLOBAL 2021-2022: %f\n", totalglobal(fuente, 0, nfuentes));  //total global de 2021 y 2022
+														printf("Total GLOBAL 2021-2022: %f GWh\n", totalglobal(fuente, 0, nfuentes));  //total global de 2021 y 2022
 													}
 													break;
 												}
@@ -768,47 +768,47 @@ int main()
 												{//switch de operaciones 2021 y globales BUCLE
 													case 'e':
 														{
-															printf("Maximo 2021: %f\n", maximo(z-1, fuente, 1)); //máximo de una fuente
+															printf("Maximo 2021: %f GWh\n", maximo(z-1, fuente, 1)); //máximo de una fuente
 															break;
 														}
 													case 'f':
 														{
-															printf("Minimo 2021: %f\n", minimo(z-1, fuente, 1)); //mínimo de una fuente
+															printf("Minimo 2021: %f GWh\n", minimo(z-1, fuente, 1)); //mínimo de una fuente
 															break;
 														}
 													case 'g':
 														{
-															printf("Media 2021: %f\n", mediaInd(z-1, fuente, 1)); //media de una fuente
+															printf("Media 2021: %f GWh\n", mediaInd(z-1, fuente, 1)); //media de una fuente
 															break;
 														}
 													case 'h':
 														{
-															printf("Total 2021: %f\n", total(z-1, fuente, 1)); //total de una fuente
+															printf("Total 2021: %f GWh\n", total(z-1, fuente, 1)); //total de una fuente
 															break;
 														}
 													case 'E':
 														{
-															printf("Maximo 2021-2022: %f\n", maximo(z-1, fuente, 0)); //máximo de una fuente (dos años)
+															printf("Maximo 2021-2022: %f GWh\n", maximo(z-1, fuente, 0)); //máximo de una fuente (dos años)
 															break;
 														}
 													case 'F':
 														{
-															printf("Minimo 2021-2022: %f\n", minimo(z-1, fuente, 0)); //mínimo de una fuente (dos años)
+															printf("Minimo 2021-2022: %f GWh\n", minimo(z-1, fuente, 0)); //mínimo de una fuente (dos años)
 															break;
 														}
 													case 'G':
 														{
-															printf("Media 2021-2022: %f\n", mediaInd(z-1, fuente, 0)); //media de una fuente (dos años)
+															printf("Media 2021-2022: %f GWh\n", mediaInd(z-1, fuente, 0)); //media de una fuente (dos años)
 															break;
 														}
 													case 'H':
 														{
-															printf("Total 2021-2022: %f\n", total(z-1, fuente, 0)); //total de una fuente (dos años)
+															printf("Total 2021-2022: %f GWh\n", total(z-1, fuente, 0)); //total de una fuente (dos años)
 															break;
 														}
 													case 'x':
 														{
-															printf("Elige:\n TOTAL GLOBAL 2021 -1-\nTOTAL GLOBAL 2022 -2-\nTOTAL GLOBAL 2021-2022 -0-\n");
+															printf("Elige:\nTOTAL GLOBAL 2021 -1-\nTOTAL GLOBAL 2022 -2-\nTOTAL GLOBAL 2021-2022 -0-\n");
 															int q;
 															scanf(" %i", &q);
 															while(q != 1 && q != 2 && q != 0) //bucle por si el usuario se equivoca
@@ -819,15 +819,15 @@ int main()
 															
 															if(q == 1)
 															{
-																printf("Total GLOBAL 2021: %f\n", totalglobal(fuente, 1, nfuentes)); //total global de 2021
+																printf("Total GLOBAL 2021: %f GWh\n", totalglobal(fuente, 1, nfuentes)); //total global de 2021
 															}
 															else if(q == 2)
 															{
-																printf("Total GLOBAL 2022: %f\n", totalglobal(fuente, 2, nfuentes)); //total global de 2022
+																printf("Total GLOBAL 2022: %f GWh\n", totalglobal(fuente, 2, nfuentes)); //total global de 2022
 															}
 															else if(q == 0)
 															{
-																printf("Total GLOBAL 2021-2022: %f\n", totalglobal(fuente, 0, nfuentes)); //total global de 2021 y 2022
+																printf("Total GLOBAL 2021-2022: %f GWh\n", totalglobal(fuente, 0, nfuentes)); //total global de 2021 y 2022
 															}
 															break;
 														}
