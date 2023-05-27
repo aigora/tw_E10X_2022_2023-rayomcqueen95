@@ -28,13 +28,14 @@ int main()
 	else
 	{
 		printf("Fichero abierto correctamente.\n\n");
-		char c;
-		int nlineas = 0;
+		char c; //declaramos una variable char para contar los saltos de línea
+		int nlineas = 0; //iniciamos el contador en 0
 		while(fscanf(plectura, "%c", &c) != EOF)
 		{
 			if(c == '\n')
 			{
 				nlineas++;
+				//cada vez que encuentra un \n suma 1 al número de líneas
 			}
 			if(nlineas==5)
 			{
@@ -43,14 +44,14 @@ int main()
 			}
 		}
 		int linea;
-		int i=0;
-		int nfuentes = 16;
-		energia fuente[40];
+		int i=0; //contador para el bucle for
+		int nfuentes = 16; //líneas con los datos con los que se va a trabajar
+		energia fuente[40]; //vector donde guardar los valores de las energías
 		for(i=0; i<=nfuentes; i++)
 		{
-			fscanf(plectura, "%[^,]s", fuente[i].nombre);
-			fscanf(plectura, "%c", &c);
-			fscanf(plectura, "%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f", 
+			fscanf(plectura, "%[^,]s", fuente[i].nombre); //fscanf del tipo de energía
+			fscanf(plectura, "%c", &c); //fscanf para la coma que separa la fuente y los datos
+			fscanf(plectura, "%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f", //fscanf de los datos
 			&fuente[i].gwh[0], &fuente[i].gwh[1], &fuente[i].gwh[2], &fuente[i].gwh[3], &fuente[i].gwh[4], &fuente[i].gwh[5], &fuente[i].gwh[6], &fuente[i].gwh[7], &fuente[i].gwh[8],
 			&fuente[i].gwh[9], &fuente[i].gwh[10], &fuente[i].gwh[11], &fuente[i].gwh[12], &fuente[i].gwh[13], &fuente[i].gwh[14], &fuente[i].gwh[15], &fuente[i].gwh[16], &fuente[i].gwh[17], &fuente[i].gwh[18],
 			&fuente[i].gwh[19], &fuente[i].gwh[20], &fuente[i].gwh[21], &fuente[i].gwh[22], &fuente[i].gwh[23]);
@@ -79,14 +80,14 @@ int main()
 	    				scanf("%i", &anyo);
 					}
 	    			switch(anyo)
-	    			{//llave del case para elegir los datos del a�o
+	    			{//llave del case para elegir los datos del año
 	    				case(2021):
 	    					{//llave del case para '2021'
 	    						printf("\n");
 	    						for(i=0; i<=nfuentes; i++) 
 								{//lave del bucle for que muestra los datos de 2021
 									//vector meses que vaya avanzando dentro del for
-									printf("%i) %s\n", i+1, fuente[i].nombre);
+									printf("%i) %s\n", i+1, fuente[i].nombre); //determina un número para cada energía y el nombre del tipo de energía
 									printf("(Mes): (Gigavatios por hora)\n");
 									printf("Enero: %f\nFebrero: %f\nMarzo: %f\nAbril: %f\nMayo: %f\nJunio: %f\nJulio: %f\nAgosto: %f\nSeptiembre: %f\nOctubre: %f\nNoviembre: %f\nDiciembre: %f\n \n", 
 									fuente[i].gwh[0], fuente[i].gwh[1], fuente[i].gwh[2], fuente[i].gwh[3], fuente[i].gwh[4], fuente[i].gwh[5],fuente[i].gwh[6], fuente[i].gwh[7], fuente[i].gwh[8],
@@ -106,13 +107,13 @@ int main()
 									while(letra3 != 'e' && letra3 != 'f' && letra3 != 'g' && letra3 != 'h' && letra3 != 's')
 									{
 										printf("Elige una opcion valida:\n");
-										scanf(" %c", &letra3);
-									}
+										scanf(" %c", &letra3); 
+									}//bucle por si el usuario introduce una letra incorrecta
 									
 									if(letra3 == 's')
 									{
 										break;
-									}
+									}//si el usuario pulsa la letra 's', el programa sale del bucle do-while
 									
 									printf("Sobre que fuente? Selecciona posicion en la lista de arriba, de 1 a %i:\n", nfuentes);
 									scanf(" %i", &x);
@@ -120,28 +121,28 @@ int main()
 									{
 										printf("Selecciona una posicion valida\n");
 										scanf(" %i", &x);
-									}
+									}//bucle por si el usuario introduce un número incorrecto
 									
 									switch(letra3)
 									{//switch de operaciones 2021
 										case 'e':
 											{
-												printf("Maximo 2021: %f\n\n", maximo(x-1, fuente, 1));
+												printf("Maximo 2021: %f GWh\n\n", maximo(x-1, fuente, 1)); //imprime el valor máximo de una fuente
 												break;
 											}
 										case 'f':
 											{
-												printf("Minimo 2021: %f\n\n", minimo(x-1, fuente, 1));
+												printf("Minimo 2021: %f GWh\n\n", minimo(x-1, fuente, 1)); //imprime el valor mínimo de una fuente
 												break;
 											}
 										case 'g':
 											{
-												printf("Media 2021: %f\n\n", mediaInd(x-1, fuente, 1));
+												printf("Media 2021: %f GWh\n\n", mediaInd(x-1, fuente, 1)); //imprime la media de una fuente
 												break;
 											}
 										case 'h':
 											{
-												printf("Total 2021: %f\n\n", total(x-1, fuente, 1));
+												printf("Total 2021: %f GWh\n\n", total(x-1, fuente, 1)); //imprime el total
 												break;
 											}
 									}//switch de operaciones 2021
@@ -154,7 +155,7 @@ int main()
 									{
 										printf("Selecciona una opcion valida:\n");
 										scanf(" %c", &otra);
-									}
+									}//bucle por si el usuario introduce una letra incorrecta
 								}while(otra == 'y');
 								
 								
@@ -167,7 +168,7 @@ int main()
 								{
 									printf("Selecciona una opcion valida:\n");
 									scanf(" %c", &letra5);
-								}
+								}//bucle por si el usuario introduce una letra incorrecta
 								printf("\n");
 										
 								if(letra5=='j')
@@ -180,7 +181,7 @@ int main()
 								{//lave para mostrar datos de 2022 (habiendo escogido primero 2021)
 									for(i=0; i<=nfuentes; i++)
 									{//llave de bucle for que muestra 2022
-										printf("%i) %s\n", i+1, fuente[i].nombre);
+										printf("%i) %s\n", i+1, fuente[i].nombre);  //determina un número para cada energía y el nombre del tipo de energía
 										printf("(Mes): (Gigavatios por hora)\n");
 										printf("Enero: %f\nFebrero: %f\nMarzo: %f\nAbril: %f\nMayo: %f\nJunio: %f\nJulio: %f\nAgosto: %f\nSeptiembre: %f\nOctubre: %f\nNoviembre: %f\nDiciembre: %f\n \n", 
 										fuente[i].gwh[12], fuente[i].gwh[13], fuente[i].gwh[14], fuente[i].gwh[15], fuente[i].gwh[16], fuente[i].gwh[17],fuente[i].gwh[18], fuente[i].gwh[19], fuente[i].gwh[20],
@@ -197,7 +198,7 @@ int main()
 									{
 										printf("Elige una opcion valida\n");
 										scanf(" %c", &quehacer);
-									}
+									}//bucle por si el usuario introduce una letra incorrecta
 									
 									if(quehacer == 'c')
 									{
@@ -214,7 +215,7 @@ int main()
 											{
 												printf("Elige una opcion valida:\n");
 												scanf(" %c", &letra12);
-											}
+											}//bucle por si el usuario introduce una letra incorrecta
 											
 											if(letra12 == 's')
 											{//llave para salir del programa
@@ -231,49 +232,49 @@ int main()
 												{
 													printf("Selecciona una posicion valida\n");
 													scanf(" %i", &y);
-												}
+												}//bucle por si el usuario introduce un numero incorrecto
 											}
 											
 											switch(letra12)
 											{//switch de operaciones 2022 y globales
 												case 'e':
 													{
-														printf("Maximo 2022: %f\n\n", maximo(y-1, fuente, 2));
+														printf("Maximo 2022: %f GWh\n\n", maximo(y-1, fuente, 2));  //muestra el máximo de una fuente
 														break;
 													}
 												case 'f':
 													{
-														printf("Minimo 2022: %f\n\n", minimo(y-1, fuente, 2));
+														printf("Minimo 2022: %f GWh\n\n", minimo(y-1, fuente, 2));//muestra el mínimo de una fuente
 														break;
 													}
 												case 'g':
 													{
-														printf("Media 2022: %f\n\n", mediaInd(y-1, fuente, 2));
+														printf("Media 2022: %f GWh\n\n", mediaInd(y-1, fuente, 2)); //muestra la media de una fuente
 														break;
 													}
 												case 'h':
 													{
-														printf("Total 2022: %f\n\n", total(y-1, fuente, 2));
+														printf("Total 2022: %f GWh\n\n", total(y-1, fuente, 2)); //muestra el total de una fuente
 														break;
 													}
 												case 'E':
 													{
-														printf("Maximo 2021-2022: %f\n\n", maximo(y-1, fuente, 0));
+														printf("Maximo 2021-2022: %f GWh\n\n", maximo(y-1, fuente, 0));  //máximo de una fuente (dos años)
 														break;
 													}
 												case 'F':
 													{
-														printf("Minimo 2021-2022: %f\n\n", minimo(y-1, fuente, 0));
+														printf("Minimo 2021-2022: %f GWh\n\n", minimo(y-1, fuente, 0));  //mínimo de una fuente (dos años)
 														break;
 													}
 												case 'G':
 													{
-														printf("Media 2021-2022: %f\n\n", mediaInd(y-1, fuente, 0));
+														printf("Media 2021-2022: %f GWh\n\n", mediaInd(y-1, fuente, 0)); //media de una fuente (dos años)
 														break;
 													}
 												case 'H':
 													{
-														printf("Total 2021-2022: %f\n\n", total(y-1, fuente, 0));
+														printf("Total 2021-2022: %f GWh\n\n", total(y-1, fuente, 0)); //total de una fuente (dos años)
 														break;
 													}
 												case 'x':
@@ -285,19 +286,19 @@ int main()
 														{
 															printf("Elige una opcion valida");
 															scanf(" %i", &p);
-														}
+														} //bucle por si el usuario mo introduce el número que es 
 														
 														if(p == 1)
 														{
-															printf("Total GLOBAL 2021: %f\n\n", totalglobal(fuente, 1, nfuentes));
+															printf("Total GLOBAL 2021: %f GWh\n\n", totalglobal(fuente, 1, nfuentes)); //total global de 2021
 														}
 														else if(p == 2)
 														{
-															printf("Total GLOBAL 2022: %f\n\n", totalglobal(fuente, 2, nfuentes));
+															printf("Total GLOBAL 2022: %f GWh\n\n", totalglobal(fuente, 2, nfuentes));  //total global de 2022
 														}
 														else if(p == 0)
 														{
-															printf("Total GLOBAL 2021-2022: %f\n\n", totalglobal(fuente, 0, nfuentes));
+															printf("Total GLOBAL 2021-2022: %f GWh\n\n", totalglobal(fuente, 0, nfuentes)); //total global de 2021 y 2022
 														}
 														break;
 													}
@@ -311,7 +312,7 @@ int main()
 											{
 												printf("Selecciona una opcion valida:\n");
 												scanf(" %c", &otra2);
-											}		
+											}//bucle por si el usuario introduce una letra incorrecta		
 											
 											if(otra2 == 'n')
 											{
@@ -338,7 +339,7 @@ int main()
 	    						for(i=0; i<=nfuentes; i++) 
 								{//lave del bucle for que muestra los datos de 2022
 									//vector meses que vaya avanzando dentro del for
-									printf("%i) %s\n", i+1, fuente[i].nombre);
+									printf("%i) %s\n", i+1, fuente[i].nombre); //determina un número para cada energía y el nombre del tipo de energía
 									printf("(Mes): (Gigavatios por hora)\n");
 									printf("Enero: %f\nFebrero: %f\nMarzo: %f\nAbril: %f\nMayo: %f\nJunio: %f\nJulio: %f\nAgosto: %f\nSeptiembre: %f\nOctubre: %f\nNoviembre: %f\nDiciembre: %f\n \n", 
 									fuente[i].gwh[12], fuente[i].gwh[13], fuente[i].gwh[14], fuente[i].gwh[15], fuente[i].gwh[16], fuente[i].gwh[17],fuente[i].gwh[18], fuente[i].gwh[19], fuente[i].gwh[20],
@@ -359,12 +360,12 @@ int main()
 									{
 										printf("Elige una opcion valida:\n");
 										scanf(" %c", &letra3);
-									}
+									}//bucle por si el usuario introduce una letra incorrecta
 									
 									if(letra3 == 's')
 									{
 										break;
-									}
+									}//si el usuario pulsa la letra 's', el programa sale del bucle do-while
 									
 									printf("Sobre que fuente? Selecciona posicion en la lista de arriba, de 1 a %i:\n", nfuentes);
 									scanf(" %i", &x);
@@ -372,28 +373,28 @@ int main()
 									{
 										printf("Selecciona una posicion valida\n");
 										scanf(" %i", &x);
-									}
+									}//bucle por si el usuario introduce un numero incorrecto
 									
 									switch(letra3)
 									{//switch de operaciones 2022
 										case 'e':
 											{
-												printf("Maximo 2022: %f\n", maximo(x-1, fuente, 2));
+												printf("Maximo 2022: %f GWh\n\n", maximo(x-1, fuente, 2)); //imprime el valor máximo de una fuente
 												break;
 											}
 										case 'f':
 											{
-												printf("Minimo 2022: %f\n", minimo(x-1, fuente, 2));
+												printf("Minimo 2022: %f GWh\n\n", minimo(x-1, fuente, 2)); //imprime el valor mínimo de una fuente
 												break;
 											}
 										case 'g':
 											{
-												printf("Media 2022: %f\n", mediaInd(x-1, fuente, 2));
+												printf("Media 2022: %f GWh\n\n", mediaInd(x-1, fuente, 2)); //imprime la media de una fuente
 												break;
 											}
 										case 'h':
 											{
-												printf("Total 2022: %f\n", total(x-1, fuente, 2));
+												printf("Total 2022: %f GWh\n\n", total(x-1, fuente, 2)); //imprime el total
 												break;
 											}
 									}//switch de operaciones 2022
@@ -405,7 +406,7 @@ int main()
 									{
 										printf("Selecciona una opcion valida:\n");
 										scanf(" %c", &otra);
-									}
+									}//bucle por si el usuario no pulsa la tecla correcta
 								}while(otra == 'y');
 								
 								printf("  \nQue quieres hacer?\n");
@@ -417,7 +418,7 @@ int main()
 								{
 									printf("Selecciona una opcion valida:\n");
 									scanf(" %c", &letra5);
-								}
+								} //bucle por si el usuario introduce una letra incorrecta
 								printf("\n");
 										
 								if(letra5=='j')
@@ -431,7 +432,7 @@ int main()
 								{//lave para mostrar datos de 2021 (habiendo escogido primero 2022)
 									for(i=0; i<=nfuentes; i++)
 									{//llave de bucle for que muestra 2021
-										printf("%i) %s\n", i+1, fuente[i].nombre);
+										printf("%i) %s\n", i+1, fuente[i].nombre); //determina un número para cada energía y el nombre del tipo de energía
 										printf("(Mes): (Gigavatios por hora)\n");
 										printf("Enero: %f\nFebrero: %f\nMarzo: %f\nAbril: %f\nMayo: %f\nJunio: %f\nJulio: %f\nAgosto: %f\nSeptiembre: %f\nOctubre: %f\nNoviembre: %f\nDiciembre: %f\n \n", 
 										fuente[i].gwh[0], fuente[i].gwh[1], fuente[i].gwh[2], fuente[i].gwh[3], fuente[i].gwh[4], fuente[i].gwh[5],fuente[i].gwh[6], fuente[i].gwh[7], fuente[i].gwh[8],
@@ -448,7 +449,7 @@ int main()
 									{
 										printf("Elige una opcion valida\n");
 										scanf(" %c", &quehacer);
-									}
+									} //bucle por si el usuario no pulsa la tecla correcta
 									
 									if(quehacer == 'c')
 									{
@@ -465,7 +466,7 @@ int main()
 											{
 												printf("Elige una opcion valida:\n");
 												scanf(" %c", &letra12);
-											}
+											} //bucle por si el usuario no pulsa la tecla correcta
 											
 											if(letra12 == 's')
 											{//llave para salir del programa
@@ -483,49 +484,49 @@ int main()
 												{
 													printf("Selecciona una posicion valida\n");
 													scanf(" %i", &y);
-												}
+												} //bucle por si el usuario no pulsa la tecla correcta
 											}
 											
 											switch(letra12)
 											{//switch de operaciones 2021 y globales
 												case 'e':
 													{
-														printf("Maximo 2021: %f\n", maximo(y-1, fuente, 1));
+														printf("Maximo 2021: %f GWh\n\n", maximo(y-1, fuente, 1)); //muestra el máximo de una fuente
 														break;
 													}
 												case 'f':
 													{
-														printf("Minimo 2021: %f\n", minimo(y-1, fuente, 1));
+														printf("Minimo 2021: %f GWh\n\n", minimo(y-1, fuente, 1)); //muestra el mínimo de una fuente
 														break;
 													}
 												case 'g':
 													{
-														printf("Media 2021: %f\n", mediaInd(y-1, fuente, 1));
+														printf("Media 2021: %f GWh\n\n", mediaInd(y-1, fuente, 1)); //media de una fuente
 														break;
 													}
 												case 'h':
 													{
-														printf("Total 2021: %f\n", total(y-1, fuente, 1));
+														printf("Total 2021: %f GWh\n\n", total(y-1, fuente, 1)); //total de una fuente
 														break;
 													}
 												case 'E':
 													{
-														printf("Maximo 2021-2022: %f\n", maximo(y-1, fuente, 0));
+														printf("Maximo 2021-2022: %f GWh\n\n", maximo(y-1, fuente, 0)); //máximo de una fuente (dos años)
 														break;
 													}
 												case 'F':
 													{
-														printf("Minimo 2021-2022: %f\n", minimo(y-1, fuente, 0));
+														printf("Minimo 2021-2022: %f GWh\n\n", minimo(y-1, fuente, 0));//mínimo de una fuente (dos años)
 														break;
 													}
 												case 'G':
 													{
-														printf("Media 2021-2022: %f\n", mediaInd(y-1, fuente, 0));
+														printf("Media 2021-2022: %f GWh\n\n", mediaInd(y-1, fuente, 0)); //media de una fuente (dos años)
 														break;
 													}
 												case 'H':
 													{
-														printf("Total 2021-2022: %f\n", total(y-1, fuente, 0));
+														printf("Total 2021-2022: %f GWh\n\n", total(y-1, fuente, 0)); //total de una fuente (dos años)
 														break;
 													}
 												case 'x':
@@ -537,19 +538,19 @@ int main()
 														{
 															printf("Elige una opcion valida");
 															scanf(" %i", &p);
-														}
+														}//bucle por si el usuario no introduce bien el número
 														
 														if(p == 1)
 														{
-															printf("Total GLOBAL 2021: %f\n", totalglobal(fuente, 1, nfuentes));
+															printf("Total GLOBAL 2021: %f GWh\n\n", totalglobal(fuente, 1, nfuentes));  //total global de 2021
 														}
 														else if(p == 2)
 														{
-															printf("Total GLOBAL 2022: %f\n", totalglobal(fuente, 2, nfuentes));
+															printf("Total GLOBAL 2022: %f GWh\n\n", totalglobal(fuente, 2, nfuentes));//total global de 2022
 														}
 														else if(p == 0)
 														{
-															printf("Total GLOBAL 2021-2022: %f\n", totalglobal(fuente, 0, nfuentes));
+															printf("Total GLOBAL 2021-2022: %f GWh\n\n", totalglobal(fuente, 0, nfuentes)); //total global de 2021 y 2022
 														}
 														break;
 													}
@@ -562,7 +563,7 @@ int main()
 											{
 												printf("Selecciona una opcion valida:\n");
 												scanf(" %c", &otra2);
-											}
+											} //bucle por si el usuario no introduce la letra correcta
 											
 											if(otra2 == 'n')
 											{
@@ -602,160 +603,185 @@ float mediaInd(int numfuente, energia vector_fuente[], int x)
 {
 	int i;
 	float suma  = 0, media;
-	if(x==1)
+	if(x==1)  //calcula la media para 2021
 	{
 		for(i=0; i<12; i++)
 		{
 			suma = suma + vector_fuente[numfuente].gwh[i];
+			//suma los datos de enero a diciembre de 2021
 		}
-		media = suma/12;
+		media = suma/12; //divide la suma obtenida entre los meses de 2021
 	}
-	else if(x==2)
+	else if(x==2)  //media para 2022
 	{
 		for(i=12; i<24; i++)
 		{
 			suma = suma + vector_fuente[numfuente].gwh[i];
+			//suma los datos de enero a diciembre de 2022
 		}
-		media = suma/12;
+		media = suma/12;  //divide la suma obtenida entre los meses de 2022
 	}
-	else if(x=0)
+	else if(x=0)  //media para los dos años
 	{
 		for(i=0; i<24; i++)
 		{
 			suma = suma + vector_fuente[numfuente].gwh[i];
+			//suma los datos de 2021 y 2022
 		}
-		media = suma/24;
+		media = suma/24;  //divide la suma obtenida entre 2021 y 2022 juntos
 	}
-	return media;
+	return media; //devuelve el valor "media"
 }
 
+//función máximo de una fuente
 float maximo(int numfuente, energia vector_fuente[], int x)
 {
 	int i;
-	float max=0;
-	if(x==1)
+	float max=0; //declara un valor como 0 para determinar el máximo
+	if(x==1) //Máximo para 2021
 	{
 		for(i=0; i<12; i++)
 		{
 			if(vector_fuente[numfuente].gwh[i] > max)
 			{
 				max = vector_fuente[numfuente].gwh[i];
+				//si max es menor que vector_fuente, max queda declarado como el valor de vector_fuente
 			}
+			//recorre los 12 meses buscando el valor máximo
 		}
 	}
-	else if(x==2)
+	else if(x==2) //Máximo para 2022
 	{
 		for(i=12; i<24; i++)
 		{
 			if(vector_fuente[numfuente].gwh[i] > max)
 			{
 				max = vector_fuente[numfuente].gwh[i];
+				//si max es menor que vector_fuente, max queda declarado como el valor de vector_fuente
 			}
+			//recorre los 12 meses buscando el valor máximo
 		}
 	}
-	else if(x==0)
+	else if(x==0) //Máximo para 2021-2022
 	{
 		for(i=0; i<24; i++)
 		{
 			if(vector_fuente[numfuente].gwh[i] > max)
 			{
 				max = vector_fuente[numfuente].gwh[i];
+				//si max es menor que vector_fuente, max queda declarado como el valor de vector_fuente
 			}
+			//recorre los 24 meses buscando el valor máximo
 		}
 	}
-	return max;
+	return max; //devuelve el valor "máximo"
 }
 
+//función mínimo de una fuente
 float minimo(int numfuente, energia vector_fuente[], int x)
 {
 	int i;
-	float min=vector_fuente[numfuente].gwh[0];
-	if(x==1)
+	float min=vector_fuente[numfuente].gwh[0]; //declara como mínimo el primer valor del vector
+	if(x==1) //mínimo para 2021
 	{
 		for(i=0; i<12; i++)
 		{
+			//recorre 2021 para encontrar el valor del vector más pequeño
 			if(vector_fuente[numfuente].gwh[i] < min)
 			{
 				min = vector_fuente[numfuente].gwh[i];
+				//si el valor del vector es más pequeño que min, este valor queda declarado como min
 			}
 		}
 	}
-	else if(x==2)
+	else if(x==2) //mínimo para 2022
 	{
 		for(i=12; i<24; i++)
 		{
+			//recorre 2022 para encontrar el valor del vector más pequeño
 			if(vector_fuente[numfuente].gwh[i] < min)
 			{
 				min = vector_fuente[numfuente].gwh[i];
+				//si el valor del vector es más pequeño que min, este valor queda declarado como min
 			}
 		}
 	}
-	else if(x==0)
+	else if(x==0) //mínimo para 2021-2022
 	{
 		for(i=0; i<24; i++)
 		{
+			//recorre 2021 y 2022 para encontrar el valor del vector más pequeño
 			if(vector_fuente[numfuente].gwh[i] < min)
 			{
 				min = vector_fuente[numfuente].gwh[i];
+				//si el valor del vector es más pequeño que min, este valor queda declarado como min
 			}
 		}
 	}
-	return min;
+	return min; //devuelve el valor "min"
 }
 
+//función total de una determinada fuente
 float total(int numfuente, energia vector_fuente[], int x)
 {
 	int i;
-	float suma=0;
-	if(x==1)
+	float suma=0; //inicia el contador de la suma en 0
+	if(x==1) //total de 2021
 	{
 		for(i=0; i<12; i++)
 		{
+			//recorre 2021 para sumar todos los valores
 			suma = suma + vector_fuente[numfuente].gwh[i];
 		}
 	}
-	else if(x==2)
+	else if(x==2) //total de 2022
 	{
 		for(i=12; i<24; i++)
 		{
+			//recorre 2022 para sumar todos los valores
 			suma = suma + vector_fuente[numfuente].gwh[i];
 		}
 	}
-	else if(x==0)
+	else if(x==0) //total de 2021-2022
 	{
 		for(i=0; i<24; i++)
 		{
+			//recorre 2021 y 2022 para sumar todos los valores
 			suma = suma + vector_fuente[numfuente].gwh[i];
 		}
 	}
-	return suma;
+	return suma; //devuelve el valor "suma"
 }
 
+//función total global (suma de los datos de todas las fuentes)
 float totalglobal(energia vector_fuente[], int x, int nfuentes)
-{
-	float totalGlob=0;
+{//tambien se puede hacer esta funcion sumando las columnas de la fila 'Generacion total'
+	float totalGlob=0; //inicia el contador de la suma en 0
 	int i;
-	if(x==1)
+	if(x==1) //suma de las fuentes de 2021
 	{
 		for(i=0; i<nfuentes-1; i++)
 		{
+			//usando la función total, suma los totales de cada fuente en 2021
 			totalGlob = totalGlob + total(i, vector_fuente, 1);
 		}
 	}
-	else if(x==2)
+	else if(x==2) //suma de las fuentes de 2022
 	{
 		for(i=0; i<nfuentes-1; i++)
 		{
+			//usando la función total, suma los totales de cada fuente en 2022
 			totalGlob = totalGlob + total(i, vector_fuente, 2);
 		}
 	}
-	else if(x==0)
+	else if(x==0) //suma de las fuentes de 2021-2022
 	{
 		for(i=0; i<nfuentes-1; i++)
 		{
+			//usando la función total, suma los totales de cada fuente en 2021-2022
 			totalGlob = totalGlob + total(i, vector_fuente, 0);
 		}
 	}
 	
-	return totalGlob;
+	return totalGlob;  //devuelve el valor "totalGlob"
 }
