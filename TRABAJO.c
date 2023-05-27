@@ -1,8 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-//al realizar las operaciones, preguntar la fuente de la que se quiere calcular la media, max y min
-
 typedef struct 
 {
 	float gwh[24];
@@ -27,7 +25,8 @@ int main()
 	}
 	else
 	{
-		printf("Fichero abierto correctamente.\n\n");
+		printf("(Fichero abierto correctamente.)\n\n");
+		printf("-------------------------------\n\n");
 		char c; //declaramos una variable char para contar los saltos de línea
 		int nlineas = 0; //iniciamos el contador en 0
 		while(fscanf(plectura, "%c", &c) != EOF)
@@ -47,7 +46,7 @@ int main()
 		int i=0; //contador para el bucle for
 		int nfuentes = 16; //líneas con los datos con los que se va a trabajar
 		energia fuente[40]; //vector donde guardar los valores de las energías
-		for(i=0; i<=nfuentes; i++)
+		for(i; i<=nfuentes; i++)
 		{
 			fscanf(plectura, "%[^,]s", fuente[i].nombre); //fscanf del tipo de energía
 			fscanf(plectura, "%c", &c); //fscanf para la coma que separa la fuente y los datos
@@ -58,7 +57,7 @@ int main()
 		}
 		
 		char letra;
-		printf("Hola :)\nBienvenido a nuestro programa.\nAqui estan recogidos los datos de la energia electrica\ngenerada en Espanya durante 2021-2022\n\n");
+		printf("Hola, bienvenido a nuestro programa.\nAqui estan recogidos los datos de la energia electrica generada en Espanya durante 2021-2022\n\n");
 		printf("Que quieres hacer?\n \n");
 	    printf("\t      Mostrar datos: -a- \n");
 	    printf("\t \t Salir: -b- \n \n");
@@ -74,7 +73,7 @@ int main()
 		            printf("\t-2022-\n");
 	    			int anyo;
 	    			scanf(" %i",&anyo);	
-	    			while(anyo != 2021 && anyo != 2022)
+	    			while(anyo != 2021 && anyo != 2022) //bucle por si el usuario introduce un valor incorrecto
 	    			{
 	    				printf("Selecciona 2021 o 2022\n");
 	    				scanf("%i", &anyo);
@@ -86,7 +85,6 @@ int main()
 	    						printf("\n");
 	    						for(i=0; i<=nfuentes; i++) 
 								{//lave del bucle for que muestra los datos de 2021
-									//vector meses que vaya avanzando dentro del for
 									printf("%i) %s\n", i+1, fuente[i].nombre); //determina un número para cada energía y el nombre del tipo de energía
 									printf("(Mes): (Gigavatios por hora)\n");
 									printf("Enero: %f\nFebrero: %f\nMarzo: %f\nAbril: %f\nMayo: %f\nJunio: %f\nJulio: %f\nAgosto: %f\nSeptiembre: %f\nOctubre: %f\nNoviembre: %f\nDiciembre: %f\n \n", 
@@ -102,7 +100,7 @@ int main()
 								do
 								{
 									printf("\nQue operacion quieres realizar?\n");
-									printf("\t Max -e-\n\t Min -f-\n\tMedia -g-\n\tTotal -h-\n\t No quiero hacer operaciones -s-\n");
+									printf("\t Max -e-\n\t Min -f-\n\tMedia -g-\n\tTotal -h-\nNo quiero hacer operaciones -s-\n");
 									scanf(" %c",&letra3);
 									while(letra3 != 'e' && letra3 != 'f' && letra3 != 'g' && letra3 != 'h' && letra3 != 's')
 									{
@@ -160,7 +158,7 @@ int main()
 								
 								
 								printf("  \nQue quieres hacer?\n");
-								printf("Salir del programa -j-\nMostrar datos de 2022 -k-\n\n");
+								printf("Mostrar datos de 2022 -k-\nSalir del programa -j-\n");
 								char letra5;
 								scanf(" %c",&letra5);
 								
@@ -173,7 +171,7 @@ int main()
 										
 								if(letra5=='j')
 								{//llave para salir del programa
-									printf("--------------------------------\n");
+									printf("\n--------------------------------\n");
 									printf("Gracias por usar nuestro programa!");
 									exit(0);
 								}//llave para salir del programa
@@ -188,7 +186,7 @@ int main()
 										fuente[i].gwh[21], fuente[i].gwh[22], fuente[i].gwh[23]);	
 									}//llave de bucle for que muestra 2022
 									printf("----------------------------\n");
-									printf(" Que quieres hacer?\n");
+									printf("Que quieres hacer?\n");
 									printf("Realizar operaciones: -c-\n");
 									printf("Salir del programa: -s-\n");
 									
@@ -209,7 +207,7 @@ int main()
 										do
 										{
 											printf("  Que quieres hacer?\n");
-											printf("\t Max -e-\n\t Min -f-\n\tMedia -g-\n\tTotal -h-\n\t Operaciones globales(los dos anyos incluidos) -Igual pero letras en mayuscula-\n\t TOTAL GLOBAL DE TODAS LAS FUENTES SUMADAS -x-\n\tSalir del programa -s-");
+											printf("\t Max -e-\n\t Min -f-\n\tMedia -g-\n\tTotal -h-\nOperaciones globales (los dos anyos incluidos) -Igual pero letras en mayuscula-\n   TOTAL GLOBAL DE TODAS LAS FUENTES SUMADAS -x-\n     Salir del programa -s-\n");
 											scanf(" %c",&letra12);
 											while(letra12 != 'e' && letra12 != 'f' && letra12 != 'g' && letra12 != 'h' && letra12 != 'E' && letra12 != 'F' && letra12 != 'G' && letra12 != 'H' && letra12 != 'x' && letra12 != 's')
 											{
@@ -219,7 +217,7 @@ int main()
 											
 											if(letra12 == 's')
 											{//llave para salir del programa
-												printf("--------------------------------\n");
+												printf("\n--------------------------------\n");
 												printf("Gracias por usar nuestro programa!");
 												exit(0);
 											}//llave para salir del programa
@@ -279,7 +277,7 @@ int main()
 													}
 												case 'x':
 													{
-														printf("Elige:\n TOTAL GLOBAL 2021 -1-\nTOTAL GLOBAL 2022 -2-\nTOTAL GLOBAL 2021-2022 -0-\n");
+														printf("Elige:\n  TOTAL GLOBAL 2021 -1-\n  TOTAL GLOBAL 2022 -2-\nTOTAL GLOBAL 2021-2022 -0-\n");
 														int p;
 														scanf(" %i", &p);
 														while(p != 1 && p != 2 && p != 0)
@@ -306,7 +304,7 @@ int main()
 											printf("------------------------------\n");
 												
 											
-											printf("Quieres hacer otra operacion?\n\tSi -y-\n\tNo (salir del programa) -n-\n");
+											printf("Quieres hacer otra operacion?\n\tSi -y-\nNo (salir del programa) -n-\n");
 											scanf(" %c", &otra2);
 											while(otra2 != 'y' && otra2 != 'n')
 											{
@@ -316,7 +314,7 @@ int main()
 											
 											if(otra2 == 'n')
 											{
-												printf("--------------------------------\n");
+												printf("\n--------------------------------\n");
 												printf("Gracias por usar nuestro programa!");
 												exit(0);
 											}
@@ -326,7 +324,7 @@ int main()
 									
 									else if(quehacer == 's')
 									{//llave para salir del programa
-										printf("--------------------------------\n");
+										printf("\n--------------------------------\n");
 										printf("Gracias por usar nuestro programa!");
 										exit(0);
 									}//llave para salir del programa
@@ -338,7 +336,6 @@ int main()
 	    						printf("\n");
 	    						for(i=0; i<=nfuentes; i++) 
 								{//lave del bucle for que muestra los datos de 2022
-									//vector meses que vaya avanzando dentro del for
 									printf("%i) %s\n", i+1, fuente[i].nombre); //determina un número para cada energía y el nombre del tipo de energía
 									printf("(Mes): (Gigavatios por hora)\n");
 									printf("Enero: %f\nFebrero: %f\nMarzo: %f\nAbril: %f\nMayo: %f\nJunio: %f\nJulio: %f\nAgosto: %f\nSeptiembre: %f\nOctubre: %f\nNoviembre: %f\nDiciembre: %f\n \n", 
@@ -354,7 +351,7 @@ int main()
 								do
 								{
 									printf("\nQue operacion quieres realizar?\n");
-									printf("\t Max -e-\n\t Min -f-\n\tMedia -g-\n\tTotal -h-\n\tNo quiero hacer operaciones -s-\n");
+									printf("\t Max -e-\n\t Min -f-\n\tMedia -g-\n\tTotal -h-\nNo quiero hacer operaciones -s-\n");
 									scanf(" %c",&letra3);
 									while(letra3 != 'e' && letra3 != 'f' && letra3 != 'g' && letra3 != 'h' && letra3 != 's')
 									{
@@ -410,7 +407,7 @@ int main()
 								}while(otra == 'y');
 								
 								printf("  \nQue quieres hacer?\n");
-								printf("Salir del programa -j-\nMostrar datos de 2021 -k-\n\n");
+								printf("Mostrar datos de 2021 -k-\n  Salir del programa -j-\n");
 								char letra5;
 								scanf(" %c",&letra5);
 								
@@ -423,7 +420,7 @@ int main()
 										
 								if(letra5=='j')
 								{//llave para salir del programa
-									printf("--------------------------------\n");
+									printf("\n--------------------------------\n");
 									printf("Gracias por usar nuestro programa!");
 									exit(0);
 								}//llave para salir del programa
@@ -439,9 +436,9 @@ int main()
 										fuente[i].gwh[9], fuente[i].gwh[10], fuente[i].gwh[11]);	
 									}//llave de bucle for que muestra 2021
 									printf("----------------------------\n");
-									printf(" Que quieres hacer?\n");
+									printf("Que quieres hacer?\n");
 									printf("Realizar operaciones: -c-\n");
-									printf("Salir del programa: -s-\n");
+									printf(" Salir del programa: -s-\n");
 									
 									char quehacer;
 									scanf(" %c", &quehacer);
@@ -460,7 +457,7 @@ int main()
 										do
 										{
 											printf("  Que quieres hacer?\n");
-											printf("\t Max -e-\n\t Min -f-\n\tMedia -g-\n\tTotal -h-\n\t Operaciones globales(los dos anyos incluidos) -Igual pero letras en mayuscula-\n\t TOTAL GLOBAL DE TODAS LAS FUENTES SUMADAS -x-\n\tSalir del programa -s-\n");
+											printf("\t Max -e-\n\t Min -f-\n\tMedia -g-\n\tTotal -h-\nOperaciones globales (los dos anyos incluidos) -Igual pero letras en mayuscula-\n   TOTAL GLOBAL DE TODAS LAS FUENTES SUMADAS -x-\n\tSalir del programa -s-\n");
 											scanf(" %c",&letra12);
 											while(letra12 != 'e' && letra12 != 'f' && letra12 != 'g' && letra12 != 'h' && letra12 != 'E' && letra12 != 'F' && letra12 != 'G' && letra12 != 'H' && letra12 != 'x' && letra12 != 's')
 											{
@@ -470,7 +467,7 @@ int main()
 											
 											if(letra12 == 's')
 											{//llave para salir del programa
-												printf("--------------------------------\n");
+												printf("\n--------------------------------\n");
 												printf("Gracias por usar nuestro programa!");
 												exit(0);
 											}//llave para salir del programa
@@ -531,7 +528,7 @@ int main()
 													}
 												case 'x':
 													{
-														printf("Elige:\n TOTAL GLOBAL 2021 -1-\nTOTAL GLOBAL 2022 -2-\nTOTAL GLOBAL 2021-2022 -0-\n");
+														printf("Elige:\n  TOTAL GLOBAL 2021 -1-\n  TOTAL GLOBAL 2022 -2-\nTOTAL GLOBAL 2021-2022 -0-\n");
 														int p;
 														scanf(" %i", &p);
 														while(p != 1 && p != 2 && p != 0)
@@ -567,7 +564,7 @@ int main()
 											
 											if(otra2 == 'n')
 											{
-												printf("--------------------------------\n");
+												printf("\n--------------------------------\n");
 												printf("Gracias por usar nuestro programa!");
 												exit(0);
 											}
@@ -576,7 +573,7 @@ int main()
 									}
 									else if(quehacer == 's')
 									{//llave para salir del programa
-										printf("--------------------------------\n");
+										printf("\n--------------------------------\n");
 										printf("Gracias por usar nuestro programa!");
 										exit(0);
 									}//llave para salir del programa
@@ -586,7 +583,7 @@ int main()
 				}//llave para entrar en el programa al inicio
 			case ('b'):
 				{//llave para salir al principio
-					printf("--------------------------------\n");
+					printf("\n--------------------------------\n");
 					printf("Gracias por usar nuestro programa!");
 					exit(0);
 				}//llave para salir al principio
@@ -602,7 +599,7 @@ int main()
 float mediaInd(int numfuente, energia vector_fuente[], int x)
 {
 	int i;
-	float suma  = 0, media;
+	float suma=0, media;
 	if(x==1)  //calcula la media para 2021
 	{
 		for(i=0; i<12; i++)
@@ -782,6 +779,5 @@ float totalglobal(energia vector_fuente[], int x, int nfuentes)
 			totalGlob = totalGlob + total(i, vector_fuente, 0);
 		}
 	}
-	
 	return totalGlob;  //devuelve el valor "totalGlob"
 }
