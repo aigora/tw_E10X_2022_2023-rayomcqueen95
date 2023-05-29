@@ -1,5 +1,5 @@
-## Cálculos estadísticos sobre la energía eléctrica producida en España
-Nuestro proyecto se basa en un programa escrito en C donde mostramos al usuario distintos cálculos a partir de un fichero de excel en el que se encuentran registrados datos de energía eléctrica producida en España durante dos años.
+# Cálculos estadísticos sobre la energía eléctrica producida en España
+Nuestro proyecto se basa en un programa escrito en C donde mostramos al usuario distintas operaciones calculadas a partir de un fichero de excel en el que se encuentran registrados datos de energía eléctrica producida en España durante dos años.
 
 ## Integrantes del equipo
 - Jose Juan Cerro Martín (@_Jtaas_)
