@@ -1,4 +1,4 @@
-# [Título del trabajo]
+# Cálculos estadísticos sobre la energía eléctrica producida en España
 
 [Descripción breve del proyecto a realizar (2-3 frases).]
 
